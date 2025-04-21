@@ -1,10 +1,17 @@
-[27812:2328:0421/141349.526:INFO:chrome_browser_cloud_management_controller.cc(202)] No machine level policy manager exists.
-[27812:2328:0421/141350.189:INFO:CONSOLE(2)] "JQMIGRATE: Migrate is installed, version 1.4.1", source: https://code.jquery.com/jquery-migrate-1.4.1.min.js (2)
-[27812:2328:0421/141350.356:INFO:CONSOLE(1)] "EVENT_STATE_LISTENER INITIAL -- time :  1745234030", source: https://cdn.shopify.com/extensions/bbf19611-0edb-4fec-a1c6-8ccbc2e99f37/surebright-extended-warranty-689/assets/sbsimsdk.js (1)
-[27812:2328:0421/141350.356:INFO:CONSOLE(1)] "EVENT_STATE_LISTENER Got Ready State event listener - interactive -- time :  0", source: https://cdn.shopify.com/extensions/bbf19611-0edb-4fec-a1c6-8ccbc2e99f37/surebright-extended-warranty-689/assets/sbsimsdk.js (1)
-[27812:2328:0421/141350.372:INFO:CONSOLE(1)] "Uncaught TypeError: Cannot read properties of undefined (reading 'includes')", source: https://theconnectedshop.com/cdn/shop/t/3/assets/custom.js?v=109770364668117361831689884682 (1)
-[27812:2328:0421/141350.783:INFO:CONSOLE(1)] "[bugsnag] Loaded!", source: https://us-assets.i.posthog.com/static/recorder.js?v=1.236.2 (1)
-[27812:2328:0421/141351.556:INFO:CONSOLE(1)] "EVENT_STATE_LISTENER Got Ready State event listener - complete -- time :  1", source: https://us-assets.i.posthog.com/static/recorder.js?v=1.236.2 (1)
-[27812:2328:0421/141351.704:INFO:CONSOLE(0)] "Refused to execute script from 'https://theconnectedshop.com/?app_connection_id=f9c40bdc58bf420bb94ea2163b3c7562&mapped_org_id=c9f39a083f2a97edc2e7f865a6fd787a_v1&shop=theconnectedshop.myshopify.com' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.", source: https://theconnectedshop.com/ (0)
-[31560:20656:0421/141351.842:WARNING:sqlite_persistent_store_backend_base.cc(176)] Failed to post task from FlushAndNotifyInBackground@net\extras\sqlite\sqlite_persistent_store_backend_base.cc:226 to client_task_runner_.
-[31560:20656:0421/141351.842:WARNING:sqlite_persistent_store_backend_base.cc(176)] Failed to post task from FlushAndNotifyInBackground@net\extras\sqlite\sqlite_persistent_store_backend_base.cc:226 to client_task_runner_.
+[19656:2592:0421/225016.083:INFO:chrome_browser_cloud_management_controller.cc(202)] No machine level policy manager exists.
+[28840:14960:0421/225016.164:INFO:cpu_info.cc(53)] Available number of cores: 32
+[32248:28756:0421/225016.164:INFO:cpu_info.cc(53)] Available number of cores: 32
+[30388:12304:0421/225016.223:VERBOSE1:viz_main_impl.cc(85)] VizNullHypothesis is disabled (not a warning)
+[32740:15972:0421/225016.306:INFO:cpu_info.cc(53)] Available number of cores: 32
+[14972:23940:0421/225016.474:INFO:cpu_info.cc(53)] Available number of cores: 32
+[19656:2592:0421/225016.786:INFO:CONSOLE(2)] "JQMIGRATE: Migrate is installed, version 1.4.1", source: https://code.jquery.com/jquery-migrate-1.4.1.min.js (2)
+[17348:8388:0421/225016.874:INFO:cpu_info.cc(53)] Available number of cores: 32
+[19656:2592:0421/225016.994:INFO:CONSOLE(1)] "EVENT_STATE_LISTENER INITIAL -- time :  1745265016", source: https://cdn.shopify.com/extensions/91f0bbca-4384-4bc6-81bb-64d5c6a593d0/surebright-extended-warranty-690/assets/sbsimsdk.js (1)
+[19656:2592:0421/225016.994:INFO:CONSOLE(1)] "EVENT_STATE_LISTENER Got Ready State event listener - interactive -- time :  0", source: https://cdn.shopify.com/extensions/91f0bbca-4384-4bc6-81bb-64d5c6a593d0/surebright-extended-warranty-690/assets/sbsimsdk.js (1)
+[27124:1240:0421/225017.054:INFO:cpu_info.cc(53)] Available number of cores: 32
+[22716:30868:0421/225017.150:INFO:cpu_info.cc(53)] Available number of cores: 32
+[19656:2592:0421/225017.446:INFO:CONSOLE(1)] "[bugsnag] Loaded!", source: https://us-assets.i.posthog.com/static/recorder.js?v=1.236.2 (1)
+[19656:2592:0421/225018.284:INFO:CONSOLE(1)] "EVENT_STATE_LISTENER Got Ready State event listener - complete -- time :  2", source: https://us-assets.i.posthog.com/static/recorder.js?v=1.236.2 (1)
+[19656:2592:0421/225018.426:INFO:CONSOLE(0)] "Refused to execute script from 'https://theconnectedshop.com/?app_connection_id=f9c40bdc58bf420bb94ea2163b3c7562&mapped_org_id=c9f39a083f2a97edc2e7f865a6fd787a_v1&shop=theconnectedshop.myshopify.com' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.", source: https://theconnectedshop.com/ (0)
+[4124:2760:0421/225018.864:WARNING:sqlite_persistent_store_backend_base.cc(176)] Failed to post task from FlushAndNotifyInBackground@net\extras\sqlite\sqlite_persistent_store_backend_base.cc:226 to client_task_runner_.
+[4124:2760:0421/225018.864:WARNING:sqlite_persistent_store_backend_base.cc(176)] Failed to post task from FlushAndNotifyInBackground@net\extras\sqlite\sqlite_persistent_store_backend_base.cc:226 to client_task_runner_.

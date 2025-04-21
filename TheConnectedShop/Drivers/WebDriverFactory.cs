@@ -16,9 +16,9 @@ options.AddArgument("--no-sandbox");
 options.AddArgument("--disable-dev-shm-usage");
 IWebDriver driver = new ChromeDriver(options);
 driver.Manage().Window.Maximize();
-            return driver;
-
-        }
-    }}
+return driver;
+}
+}
+}
 
  

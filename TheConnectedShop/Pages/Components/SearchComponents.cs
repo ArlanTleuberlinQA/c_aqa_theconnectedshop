@@ -19,16 +19,46 @@ namespace Theconnectedshop.Pages.Components
             this.wait = new WebDriverWait(driver, TimeSpan.FromSeconds(Settings.DefaultTimeout));
         }
         private By SearchButton => By.CssSelector("a[data-action='toggle-search']");
-        private By SearchInput => By.ClassName("Search__Input");
-        public bool IsSearchButtonDisplayed() => driver.FindElement(SearchButton).Displayed;
-        public string GetSearchHref() => driver.FindElement(SearchButton).GetAttribute("href");
-        public void ClickSearchButton() => driver.FindElement(SearchButton).Click();
+        private By SearchInput => By.CssSelector("[name='q']");
+        private By ProductItem => By.ClassName("ProductItem__ImageWrapper");
+        private IWebElement GetFirstSearchButton() 
+        {
+            var elements = driver.FindElements(SearchButton);
+            if (!elements.Any())
+            throw new NoSuchElementException("Не найден элемент с data-action='toggle-search'");
+            return elements.First();
+        }
+        private IWebElement GetFirstSearchItem() 
+        {
+            var elements = driver.FindElements(ProductItem);
+            if (!elements.Any())
+            throw new NoSuchElementException("Не найден элемент с классом ProductItem__ImageWrapper'");
+            return elements.First();
+        }
+        public bool IsSearchButtonDisplayed() => GetFirstSearchButton().Displayed;
+        public string GetSearchHref() => GetFirstSearchButton().GetAttribute("href");
+        public void ClickSearchButton() => GetFirstSearchButton().Click();
         public bool IsSearchInputDisplayed()
         {
             wait.Until(ExpectedConditions.ElementIsVisible(SearchInput));
-            return driver.FindElement(SearchInput).Displayed;
+            return GetFirstSearchButton().Displayed;
         }
+        
         public string GetSearchPlaceholder() => driver.FindElement(SearchInput).GetAttribute("placeholder");
+        public void EnterSearchQuery(string query)
+        {
+            wait.Until(ExpectedConditions.ElementIsVisible(SearchInput));
+            var input = driver.FindElement(SearchInput);
+            input.Clear(); 
+            input.SendKeys(query);
+        }
+        public string GetSearchInputValue()
+        {
+            return driver.FindElement(SearchInput).GetAttribute("value");
+        }
+        public string GetItemhHref() => GetFirstSearchItem().GetAttribute("href");
+        public bool IsItemDisplayed() => GetFirstSearchItem().Displayed;
+
     }
 }
  

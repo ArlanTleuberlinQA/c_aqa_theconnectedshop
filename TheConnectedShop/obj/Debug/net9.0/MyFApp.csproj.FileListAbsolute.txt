@@ -325,8 +325,8 @@ C:\Users\Arlan\Documents\C#_learning\MyFApp\obj\Debug\net9.0\refint\MyFApp.dll
 C:\Users\Arlan\Documents\C#_learning\MyFApp\obj\Debug\net9.0\MyFApp.pdb
 C:\Users\Arlan\Documents\C#_learning\MyFApp\obj\Debug\net9.0\MyFApp.genruntimeconfig.cache
 C:\Users\Arlan\Documents\C#_learning\MyFApp\obj\Debug\net9.0\ref\MyFApp.dll
-C:\Users\Arlan\Documents\C#_learning\TheConnectedShop\bin\Debug\net9.0\testhost.exe
 C:\Users\Arlan\Documents\C#_learning\TheConnectedShop\bin\Debug\net9.0\testhost.dll
+C:\Users\Arlan\Documents\C#_learning\TheConnectedShop\bin\Debug\net9.0\testhost.exe
 C:\Users\Arlan\Documents\C#_learning\TheConnectedShop\bin\Debug\net9.0\selenium-manager\linux\selenium-manager
 C:\Users\Arlan\Documents\C#_learning\TheConnectedShop\bin\Debug\net9.0\selenium-manager\macos\selenium-manager
 C:\Users\Arlan\Documents\C#_learning\TheConnectedShop\bin\Debug\net9.0\selenium-manager\windows\selenium-manager.exe

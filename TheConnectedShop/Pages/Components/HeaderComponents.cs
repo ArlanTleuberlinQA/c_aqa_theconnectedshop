@@ -20,8 +20,7 @@ private By CartButton => By.CssSelector("a[aria-label='Open cart']");
 private By CartCount => By.CssSelector(".Header__CartCount");
 public void WaitForPageToLoad()
 {
-wait.Until(driver => ((IJavaScriptExecutor)driver)
-.ExecuteScript("return document.readyState").Equals("complete"));
+wait.Until(driver => ((IJavaScriptExecutor)driver).ExecuteScript("return document.readyState").Equals("complete"));
 }
 public bool IsLogoDisplayed() => driver.FindElement(Logo).Displayed;
 public string GetLogoHeight() => driver.FindElement(Logo).GetAttribute("height");

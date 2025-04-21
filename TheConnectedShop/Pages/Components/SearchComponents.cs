@@ -4,7 +4,6 @@ using SeleniumExtras.WaitHelpers;
 using System;
 using TheConnectedShop.Config;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Support.UI;
 
 namespace Theconnectedshop.Pages.Components
 
@@ -20,7 +19,20 @@ namespace Theconnectedshop.Pages.Components
         }
         private By SearchButton => By.CssSelector("a[data-action='toggle-search']");
         private By SearchInput => By.CssSelector("[name='q']");
-        private By ProductItem => By.ClassName("ProductItem__ImageWrapper");
+        private By ProductItem => By.CssSelector(".Segment__Content > div > div:nth-child(1) > div > div > a");
+        private By ItemNotFound => By.CssSelector(".Segment__Content > p");
+        public string? GetNoResultsText()
+{
+    try
+    {
+        return driver.FindElement(ItemNotFound).Text;
+    }
+    catch (NoSuchElementException)
+    {
+        return null;
+    }
+}
+
         private IWebElement GetFirstSearchButton() 
         {
             var elements = driver.FindElements(SearchButton);
@@ -28,13 +40,13 @@ namespace Theconnectedshop.Pages.Components
             throw new NoSuchElementException("Не найден элемент с data-action='toggle-search'");
             return elements.First();
         }
-        private IWebElement GetFirstSearchItem() 
-        {
-            var elements = driver.FindElements(ProductItem);
-            if (!elements.Any())
-            throw new NoSuchElementException("Не найден элемент с классом ProductItem__ImageWrapper'");
-            return elements.First();
-        }
+        // private IWebElement GetFirstSearchItem() 
+        // {
+        //     var elements = driver.FindElements(ProductItem);
+        //     if (!elements.Any())
+        //     throw new NoSuchElementException("Не найден элемент с классом ProductItem__ImageWrapper'");
+        //     return elements.First();
+        // }
         public bool IsSearchButtonDisplayed() => GetFirstSearchButton().Displayed;
         public string GetSearchHref() => GetFirstSearchButton().GetAttribute("href");
         public void ClickSearchButton() => GetFirstSearchButton().Click();
@@ -56,9 +68,32 @@ namespace Theconnectedshop.Pages.Components
         {
             return driver.FindElement(SearchInput).GetAttribute("value");
         }
-        public string GetItemhHref() => GetFirstSearchItem().GetAttribute("href");
-        public bool IsItemDisplayed() => GetFirstSearchItem().Displayed;
-
+        public string GetItemhHref() => driver.FindElement(ProductItem).GetAttribute("href");
+        public bool IsItemDisplayed() {
+    try
+    {
+        var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(Settings.DefaultTimeout));
+        var element = wait.Until(driver => driver.FindElement(ProductItem));
+        return element.Displayed;
+    }
+    catch (WebDriverTimeoutException)
+    {
+        return false;
+    }
+}
+        public bool IsItemNotFoundDisplayed()
+{
+    try
+    {
+        var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(Settings.DefaultTimeout));
+        var element = wait.Until(driver => driver.FindElement(ItemNotFound));
+        return element.Displayed;
+    }
+    catch (WebDriverTimeoutException)
+    {
+        return false;
+    }
+}
     }
 }
  

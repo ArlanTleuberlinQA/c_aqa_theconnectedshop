@@ -325,6 +325,12 @@ C:\Users\Arlan\Documents\C#_learning\MyFApp\obj\Debug\net9.0\refint\MyFApp.dll
 C:\Users\Arlan\Documents\C#_learning\MyFApp\obj\Debug\net9.0\MyFApp.pdb
 C:\Users\Arlan\Documents\C#_learning\MyFApp\obj\Debug\net9.0\MyFApp.genruntimeconfig.cache
 C:\Users\Arlan\Documents\C#_learning\MyFApp\obj\Debug\net9.0\ref\MyFApp.dll
+C:\Users\Arlan\Documents\C#_learning\TheConnectedShop\obj\Debug\net9.0\MyFApp.csproj.AssemblyReference.cache
+C:\Users\Arlan\Documents\C#_learning\TheConnectedShop\obj\Debug\net9.0\MyFApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Arlan\Documents\C#_learning\TheConnectedShop\obj\Debug\net9.0\MyFApp.AssemblyInfoInputs.cache
+C:\Users\Arlan\Documents\C#_learning\TheConnectedShop\obj\Debug\net9.0\MyFApp.AssemblyInfo.cs
+C:\Users\Arlan\Documents\C#_learning\TheConnectedShop\obj\Debug\net9.0\MyFApp.csproj.CoreCompileInputs.cache
+C:\Users\Arlan\Documents\C#_learning\TheConnectedShop\obj\Debug\net9.0\MyFApp.sourcelink.json
 C:\Users\Arlan\Documents\C#_learning\TheConnectedShop\bin\Debug\net9.0\testhost.dll
 C:\Users\Arlan\Documents\C#_learning\TheConnectedShop\bin\Debug\net9.0\testhost.exe
 C:\Users\Arlan\Documents\C#_learning\TheConnectedShop\bin\Debug\net9.0\selenium-manager\linux\selenium-manager
@@ -477,12 +483,6 @@ C:\Users\Arlan\Documents\C#_learning\TheConnectedShop\bin\Debug\net9.0\zh-Hans\M
 C:\Users\Arlan\Documents\C#_learning\TheConnectedShop\bin\Debug\net9.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 C:\Users\Arlan\Documents\C#_learning\TheConnectedShop\bin\Debug\net9.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\Users\Arlan\Documents\C#_learning\TheConnectedShop\bin\Debug\net9.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-C:\Users\Arlan\Documents\C#_learning\TheConnectedShop\obj\Debug\net9.0\MyFApp.csproj.AssemblyReference.cache
-C:\Users\Arlan\Documents\C#_learning\TheConnectedShop\obj\Debug\net9.0\MyFApp.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Arlan\Documents\C#_learning\TheConnectedShop\obj\Debug\net9.0\MyFApp.AssemblyInfoInputs.cache
-C:\Users\Arlan\Documents\C#_learning\TheConnectedShop\obj\Debug\net9.0\MyFApp.AssemblyInfo.cs
-C:\Users\Arlan\Documents\C#_learning\TheConnectedShop\obj\Debug\net9.0\MyFApp.csproj.CoreCompileInputs.cache
-C:\Users\Arlan\Documents\C#_learning\TheConnectedShop\obj\Debug\net9.0\MyFApp.sourcelink.json
 C:\Users\Arlan\Documents\C#_learning\TheConnectedShop\obj\Debug\net9.0\MyFApp.csproj.Up2Date
 C:\Users\Arlan\Documents\C#_learning\TheConnectedShop\obj\Debug\net9.0\MyFApp.dll
 C:\Users\Arlan\Documents\C#_learning\TheConnectedShop\obj\Debug\net9.0\refint\MyFApp.dll

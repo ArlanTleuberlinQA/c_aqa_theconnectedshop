@@ -33,6 +33,7 @@ Assert.That(homePage.Search.GetSearchPlaceholder(), Is.EqualTo("Search..."), "Se
 [Test]
 public void Found_RealItem()
 {
+    Assert.That(homePage.Search.IsSearchButtonDisplayed(), "Search button is not visible");
     homePage.Search.ClickSearchButton();
     Assert.That(homePage.Search.IsSearchInputDisplayed(), "Search input is not displayed");
     homePage.Search.EnterSearchQuery("Smart Door Lock Slim");
@@ -47,6 +48,7 @@ public void Found_RealItem()
 [Test]
 public void Found_UnavailableItem()
 {
+    Assert.That(homePage.Search.IsSearchButtonDisplayed(), "Search button is not visible");
     homePage.Search.ClickSearchButton();
     Assert.That(homePage.Search.IsSearchInputDisplayed(), "Search input is not displayed");
     homePage.Search.EnterSearchQuery("undefined");

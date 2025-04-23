@@ -4,6 +4,8 @@ using SeleniumExtras.WaitHelpers;
 using System;
 using TheConnectedShop.Config;
 using OpenQA.Selenium.Chrome;
+using Theconnectedshop.Config.Utils;
+
 
 namespace Theconnectedshop.Pages.Components
 
@@ -47,53 +49,17 @@ namespace Theconnectedshop.Pages.Components
         //     throw new NoSuchElementException("Не найден элемент с классом ProductItem__ImageWrapper'");
         //     return elements.First();
         // }
-        public bool IsSearchButtonDisplayed() => GetFirstSearchButton().Displayed;
+        public bool IsSearchButtonDisplayed() => UniversalMethods.IsElementDisplayed(driver, GetFirstSearchButton);
         public string GetSearchHref() => GetFirstSearchButton().GetAttribute("href");
-        public void ClickSearchButton() => GetFirstSearchButton().Click();
-        public bool IsSearchInputDisplayed()
-        {
-            wait.Until(ExpectedConditions.ElementIsVisible(SearchInput));
-            return GetFirstSearchButton().Displayed;
-        }
+        public void ClickSearchButton() => UniversalMethods.ClickElement(driver, GetFirstSearchButton);
+        public bool IsSearchInputDisplayed() => UniversalMethods.IsElementDisplayed(driver, SearchInput);
         
         public string GetSearchPlaceholder() => driver.FindElement(SearchInput).GetAttribute("placeholder");
-        public void EnterSearchQuery(string query)
-        {
-            wait.Until(ExpectedConditions.ElementIsVisible(SearchInput));
-            var input = driver.FindElement(SearchInput);
-            input.Clear(); 
-            input.SendKeys(query);
-        }
-        public string GetSearchInputValue()
-        {
-            return driver.FindElement(SearchInput).GetAttribute("value");
-        }
-        public string GetItemhHref() => driver.FindElement(ProductItem).GetAttribute("href");
-        public bool IsItemDisplayed() {
-    try
-    {
-        var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(Settings.DefaultTimeout));
-        var element = wait.Until(driver => driver.FindElement(ProductItem));
-        return element.Displayed;
-    }
-    catch (WebDriverTimeoutException)
-    {
-        return false;
-    }
-}
-        public bool IsItemNotFoundDisplayed()
-{
-    try
-    {
-        var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(Settings.DefaultTimeout));
-        var element = wait.Until(driver => driver.FindElement(ItemNotFound));
-        return element.Displayed;
-    }
-    catch (WebDriverTimeoutException)
-    {
-        return false;
-    }
-}
+        public void EnterSearchQuery(string query) => UniversalMethods.EnterText(driver, SearchInput, query);
+        public string GetSearchInputValue() => UniversalMethods.GetInputValue(driver, SearchInput);
+        public string GetItemhHref() => UniversalMethods.GetElementHref(driver, ProductItem);
+        public bool IsItemDisplayed() => UniversalMethods.IsElementDisplayed(driver, ProductItem);
+        public bool IsItemNotFoundDisplayed() => UniversalMethods.IsElementDisplayed(driver, ItemNotFound);
     }
 }
  

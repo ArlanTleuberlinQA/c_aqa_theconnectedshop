@@ -3,6 +3,8 @@ using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
 using System;
 using TheConnectedShop.Config;
+using Theconnectedshop.Config.Utils;
+
 namespace Theconnectedshop.Pages.Components
 {
 public class HeaderComponent
@@ -22,14 +24,14 @@ public void WaitForPageToLoad()
 {
 wait.Until(driver => ((IJavaScriptExecutor)driver).ExecuteScript("return document.readyState").Equals("complete"));
 }
-public bool IsLogoDisplayed() => driver.FindElement(Logo).Displayed;
+public bool IsLogoDisplayed() => UniversalMethods.IsElementDisplayed(driver, Logo);
 public string GetLogoHeight() => driver.FindElement(Logo).GetAttribute("height");
 public string GetLogoWidth() => driver.FindElement(Logo).GetAttribute("width");
-public void ClickLogo() => driver.FindElement(Logo).Click();
-public bool IsAccountButtonDisplayed() => driver.FindElement(AccountButton).Displayed;
+public void ClickLogo() => UniversalMethods.ClickElement(driver, Logo);
+public bool IsAccountButtonDisplayed() => UniversalMethods.IsElementDisplayed(driver, AccountButton);
 public string GetAccountButtonHeight() => driver.FindElement(AccountButton).GetCssValue("height");
 public string GetAccountButtonWidth() => driver.FindElement(AccountButton).GetCssValue("width");
-public bool IsCartButtonDisplayed() => driver.FindElement(CartButton).Displayed;
+public bool IsCartButtonDisplayed() => UniversalMethods.IsElementDisplayed(driver, CartButton);
 public string GetCartCountText() => driver.FindElement(CartCount).Text;
 }
 }

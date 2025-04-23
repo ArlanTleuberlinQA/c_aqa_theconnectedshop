@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyFApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+42a02a23eefeb3566c6d7b989976fc5f1db28947")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+29f08800fdc70ba7fa35e78cc64a7457477a13dd")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyFApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyFApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

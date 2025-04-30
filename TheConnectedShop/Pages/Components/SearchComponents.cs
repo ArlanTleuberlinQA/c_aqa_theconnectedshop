@@ -6,7 +6,6 @@ using TheConnectedShop.Config;
 using OpenQA.Selenium.Chrome;
 using Theconnectedshop.Config.Utils;
 
-
 namespace Theconnectedshop.Pages.Components
 
 {
@@ -23,6 +22,9 @@ namespace Theconnectedshop.Pages.Components
         private By SearchInput => By.CssSelector("[name='q']");
         private By ProductItem => By.CssSelector(".Segment__Content > div > div:nth-child(1) > div > div > a");
         private By ItemNotFound => By.CssSelector(".Segment__Content > p");
+        private By AddToCartButton => By.CssSelector("[data-action='add-to-cart']");
+        private By RemoveFormCartButton => By.CssSelector("[data-action='remove-item']");
+        private By CloseCartButton => By.CssSelector("#sidebar-cart > div > button");
         public string? GetNoResultsText()
 {
     try
@@ -60,6 +62,19 @@ namespace Theconnectedshop.Pages.Components
         public string GetItemhHref() => UniversalMethods.GetElementHref(driver, ProductItem);
         public bool IsItemDisplayed() => UniversalMethods.IsElementDisplayed(driver, ProductItem);
         public bool IsItemNotFoundDisplayed() => UniversalMethods.IsElementDisplayed(driver, ItemNotFound);
+        public void ClickOnItem() => UniversalMethods.ClickElement(driver, ProductItem);
+        public void ClickOnAddToCart() => UniversalMethods.ClickElement(driver, AddToCartButton);
+        public bool IsRemoveButtomDisplayed() => UniversalMethods.IsElementDisplayed(driver, RemoveFormCartButton);
+        public void ClickOnCloseCart() => UniversalMethods.ClickElement(driver, CloseCartButton);
+        public void ClickOnRemove() => UniversalMethods.ClickElement(driver, RemoveFormCartButton);
+
+
+
+
+
+        
+
+
     }
 }
  

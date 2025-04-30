@@ -20,6 +20,7 @@ private By Logo => By.ClassName("Header__LogoImage--transparent");
 private By AccountButton => By.CssSelector("a.Heading.Link.Link--primary.Text--subdued.u-h8");
 private By CartButton => By.CssSelector("a[aria-label='Open cart']");
 private By CartCount => By.CssSelector(".Header__CartCount");
+private By CartDot => By.ClassName("Header__CartDot");
 public void WaitForPageToLoad()
 {
 wait.Until(driver => ((IJavaScriptExecutor)driver).ExecuteScript("return document.readyState").Equals("complete"));
@@ -33,5 +34,7 @@ public string GetAccountButtonHeight() => driver.FindElement(AccountButton).GetC
 public string GetAccountButtonWidth() => driver.FindElement(AccountButton).GetCssValue("width");
 public bool IsCartButtonDisplayed() => UniversalMethods.IsElementDisplayed(driver, CartButton);
 public string GetCartCountText() => driver.FindElement(CartCount).Text;
+public bool IsCartDotDisplayed() => UniversalMethods.IsElementDisplayed(driver,CartDot);
+public void ClickOnCart() => UniversalMethods.ClickElement(driver, CartButton);
 }
 }
